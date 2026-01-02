@@ -1,12 +1,22 @@
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import { Link } from "react-router-dom";
-import {
-  SidebarComponent,
-} from "@syncfusion/ej2-react-navigations";
+import { SidebarComponent } from "@syncfusion/ej2-react-navigations";
+import type { SidebarModel } from '@syncfusion/ej2-navigations';
 import NavItems from "./NavItems";
+
+interface CustomSidebarProps extends SidebarModel {
+  children?: React.ReactNode;
+}
+
+const CustomSidebar = forwardRef<SidebarComponent, CustomSidebarProps>((props, ref) => {
+  return <SidebarComponent {...props} ref={ref} />;
+});
 
 const MobileSidebar = () => {
   const sidebar = useRef<SidebarComponent>(null);
+  const toggleSidebar = () => {
+    sidebar.current?.toggle()
+  }
   return (
     <div className="mobile-sidebar wrapper">
       <header>
@@ -15,24 +25,24 @@ const MobileSidebar = () => {
 
           <h1>Tourvisto</h1>
         </Link>
-        <button onClick={() => sidebar.current?.toggle()}>
+        <button onClick={toggleSidebar}>
             <img 
                 src="/assets/icons/menu.svg" alt="menu" 
                 className="size-7" />
         </button>
       </header>
 
-      <SidebarComponent 
+      <CustomSidebar 
       ref={sidebar} 
-      width="270" enableGestures={false}
+      width="270px" enableGestures={false}
         created={()=> sidebar.current?.hide()}
         closeOnDocumentClick={true}
         showBackdrop={true}
-        type="over"
+        type="Over"
 
         >
-        <NavItems />
-      </SidebarComponent>
+        <NavItems onLinkClick={toggleSidebar} />
+      </CustomSidebar>
     </div>
   );
 };

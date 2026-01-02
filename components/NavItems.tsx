@@ -2,7 +2,11 @@ import { Link, NavLink } from "react-router";
 import { sidebarItems } from "~/constants";
 import { cn } from "@/lib/utils";
 
-const NavItems = () => {
+interface NavItemsProps {
+  onLinkClick?: () => void;
+}
+
+const NavItems = ({ onLinkClick }: NavItemsProps) => {
   const user = {
     name: "John Doe",
     email: "johndoe@gmail.com",
@@ -18,7 +22,7 @@ const NavItems = () => {
       <div className="container">
         <nav>
           {sidebarItems.map(({ id, href, icon, label }) => (
-            <NavLink to={href} key={id}>
+            <NavLink to={href} key={id} onClick={onLinkClick}>
               {({ isActive }) => (
                 <div
                   className={cn("group nav-item", {
