@@ -3,10 +3,10 @@ import { sidebarItems } from "~/constants";
 import { cn } from "@/lib/utils";
 
 interface NavItemsProps {
-  onLinkClick?: () => void;
+  handleClick?: () => void;
 }
 
-const NavItems = ({ onLinkClick }: NavItemsProps) => {
+const NavItems = ({ handleClick }: NavItemsProps) => {
   const user = {
     name: "John Doe",
     email: "johndoe@gmail.com",
@@ -22,12 +22,12 @@ const NavItems = ({ onLinkClick }: NavItemsProps) => {
       <div className="container">
         <nav>
           {sidebarItems.map(({ id, href, icon, label }) => (
-            <NavLink to={href} key={id} onClick={onLinkClick}>
+            <NavLink to={href} key={id} onClick={handleClick}>
               {({ isActive }) => (
                 <div
                   className={cn("group nav-item", {
                     "bg-primary-100 !text-white": isActive,
-                  })}
+                  })} onClick={handleClick}
                 >
                   <img
                     src={icon}

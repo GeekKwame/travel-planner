@@ -1,16 +1,7 @@
-import { useRef, forwardRef } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { SidebarComponent } from "@syncfusion/ej2-react-navigations";
-import type { SidebarModel } from '@syncfusion/ej2-navigations';
 import NavItems from "./NavItems";
-
-interface CustomSidebarProps extends SidebarModel {
-  children?: React.ReactNode;
-}
-
-const CustomSidebar = forwardRef<SidebarComponent, CustomSidebarProps>((props, ref) => {
-  return <SidebarComponent {...props} ref={ref} />;
-});
 
 const MobileSidebar = () => {
   const sidebar = useRef<SidebarComponent>(null);
@@ -32,7 +23,7 @@ const MobileSidebar = () => {
         </button>
       </header>
 
-      <CustomSidebar 
+      <SidebarComponent 
       ref={sidebar} 
       width="270px" enableGestures={false}
         created={()=> sidebar.current?.hide()}
@@ -41,8 +32,8 @@ const MobileSidebar = () => {
         type="Over"
 
         >
-        <NavItems onLinkClick={toggleSidebar} />
-      </CustomSidebar>
+        <NavItems handleClick={toggleSidebar} />
+      </SidebarComponent>
     </div>
   );
 };
