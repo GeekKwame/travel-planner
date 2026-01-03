@@ -1,9 +1,19 @@
 import React from 'react'
 
-const StatsCard = () => {
+interface StatsCardProps {
+  headerTitle: string;
+  total: number;
+  currentMonthCount: number;
+  lastMonthCount: number;
+}
+
+const StatsCard: React.FC<StatsCardProps> = ({ headerTitle, total, currentMonthCount, lastMonthCount }) => {
   return (
-    <div>
-      
+    <div className="stats-card">
+      <h3>{headerTitle}</h3>
+      <p>Total: {total}</p>
+      <p>Current Month: {currentMonthCount}</p>
+      <p>Last Month: {lastMonthCount}</p>
     </div>
   )
 }
