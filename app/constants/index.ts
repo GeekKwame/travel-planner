@@ -140,3 +140,52 @@ export const RIGHT_CONFETTI = {
   angle: 135,
   origin: { x: 1, y: 1 },
 };
+
+
+export const user = { name: "Admin" };
+
+  export const dashboardStats = {
+    totalUsers: 12450,
+    usersJoined: { currentMonth: 12400, lastMonth: 10000 },
+    totalTrips: 3210,
+    tripsCreated: { total: 62, currentMonth: 60, lastMonth: 100 },
+    userRole: { total: 62, currentMonth: 62, lastMonth: 37 },
+  };
+
+export const allTrips = [{
+      id: 1,
+      name: "Ancient Ruins",
+      imageUrls: ["/assets/images/sample1.jpg"],
+      itinerary: [{ location: "Greece" }],
+      tags: ["Adventure", "Culture"],
+      travelStyle: "Solo",
+      estimatedPrice: "$1,000",
+    },
+    {
+      id: 2,
+      name: "Gondola Ride",
+      imageUrls: ["/assets/images/sample2.jpg"],
+      itinerary: [{ location: "Venice" }],
+      tags: ["Relaxation", "Culinary"],
+      travelStyle: "Family",
+      estimatedPrice: "$2,000",
+    },
+    {
+      id: 3,
+      name: "Italy's Hidden Retreat",
+      imageUrls: ["/assets/images/sample3.jpg"],
+      itinerary: [{ location: "Positano" }],
+      tags: ["Shopping", "Luxury"],
+      travelStyle: "Couple",
+      estimatedPrice: "$3,000",
+    },
+    {
+      id: 4,
+      name: "Culture Refresh",
+      imageUrls: ["/assets/images/sample4.jpg"],
+      itinerary: [{ location: "Thailand" }],
+      tags: ["Historical", "Culture"],
+      travelStyle: "Friends",
+      estimatedPrice: "$4,000",
+    },
+    ];

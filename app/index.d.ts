@@ -162,3 +162,14 @@ declare interface TripFormData {
   duration: number;
   groupType: string;
 }
+
+declare interface DashboardTrip {
+  id: number;
+  name: string;
+  imageUrls: string[];
+  itinerary: { location: string }[];
+  tags: string[];
+  travelStyle: string;
+  estimatedPrice: string;
+}
+

@@ -77,10 +77,14 @@
   }
 
   .stats-card {
-    @apply p-6 flex flex-col gap-6 bg-white shadow-400 rounded-20 text-dark-100;
+    @apply p-6 flex flex-col bg-white shadow-400 rounded-20 text-dark-100;
+
+    h3 {
+      @apply mb-4;
+    }
 
     .content {
-      @apply flex flex-row md:flex-col-reverse xl:flex-row xl:items-center gap-3 justify-between;
+      @apply flex flex-col;
     }
   }
 
@@ -259,19 +263,52 @@
     }
   }
   .trip-card {
-    @apply shadow-300 bg-white rounded-[20px] flex-col w-full relative;
-    img {
-      @apply w-full h-[160px] rounded-t-xl object-cover aspect-video;
+    @apply shadow-300 bg-white rounded-[20px] flex-col w-full flex;
+    
+    .trip-image-container {
+      @apply relative w-full;
+      
+      .trip-image {
+        @apply w-full h-[160px] rounded-t-xl object-cover aspect-video;
+      }
+      
+      .price-tag {
+        @apply absolute top-2.5 right-4 bg-white border border-dark-300 rounded-full px-3 py-1 text-sm font-semibold text-dark-100;
+      }
     }
+    
     article {
-      @apply flex flex-col gap-3 mt-4 pl-[18px] pr-3.5;
+      @apply flex flex-col gap-3 mt-4 pl-[18px] pr-3.5 pb-4;
+      
       h2 {
         @apply text-sm md:text-lg font-semibold text-dark-100 line-clamp-2;
       }
-      figure {
+      
+      .location {
         @apply flex items-center gap-2;
-        figCaption {
+        
+        .location-icon {
+          @apply size-4;
+        }
+        
+        figcaption {
           @apply text-xs md:text-sm font-normal text-gray-100;
+        }
+      }
+      
+      .trip-tags {
+        @apply flex flex-wrap gap-2;
+        
+        .trip-tag {
+          @apply px-3 py-1 rounded-lg text-xs font-medium;
+          
+          &.tag-green {
+            @apply bg-success-50 text-success-700;
+          }
+          
+          &.tag-purple {
+            @apply bg-pink-50 text-pink-500;
+          }
         }
       }
     }
