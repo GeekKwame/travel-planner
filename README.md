@@ -36,7 +36,7 @@ Tourvisto is a modern, full-stack travel application that combines the power of 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/tourvisto.git
+   git clone https://github.com/GeekKwame/tourvisto.git
    cd tourvisto
    ```
 
@@ -76,4 +76,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-Built with ❤️ by the Tourvisto Team.
