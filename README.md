@@ -1,87 +1,79 @@
-# Welcome to React Router!
+# Tourvisto - AI-Powered Travel Planner
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Tourvisto is a modern, full-stack travel application that combines the power of AI with a seamless booking experience. It serves both tourists, who can generate personalized itineraries and book trips, and administrators, who can curate and manage travel packages.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🌟 Features
 
-## Features
+### For Tourists
+- **AI Trip Planner**: Generate personalized travel itineraries in seconds using Google's Gemini AI. Simply enter your destination, budget, and interests.
+- **My Trips Dashboard**: View and manage all your generated and booked trips in one place.
+- **Detailed Itineraries**: Access day-by-day plans, weather forecasts, and best times to visit.
+- **Secure Booking**: Integrated payment processing for booking trips.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### For Admins
+- **Dashboard**: Overview of user activity and trip statistics.
+- **Trip Management**: Create, edit, and delete curated trips.
+- **User Management**: View and manage user accounts.
 
-## Getting Started
+## 🛠️ Tech Stack
+
+- **Framework**: [React Router v7](https://reactrouter.com/) (formerly Remix/React Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + Syncfusion Components
+- **Database & Auth**: [Supabase](https://supabase.com/)
+- **AI**: Google Gemini API (`gemini-2.0-flash`)
+- **Payments**: Stripe (Integration ready)
+- **Deployment**: Node.js adapter
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or later)
+- A Supabase project
+- Google Gemini API Key
 
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/tourvisto.git
+   cd tourvisto
+   ```
 
-```bash
-npm install
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Development
+3. Configure Environment Variables:
+   Create a `.env` file in the root directory (refer to `.env.example` if available) and add:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   GEMINI_API_KEY=your_gemini_api_key
+   UNSPLASH_ACCESS_KEY=your_unsplash_key
+   ```
 
-Start the development server with HMR:
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm run dev
-```
+   Open http://localhost:5173 to view it in the browser.
 
-Your application will be available at `http://localhost:5173`.
+## 📂 Project Structure
 
-## Building for Production
+- `app/routes/`: Agile route configuration.
+  - `admin/`: Admin-specific routes (Dashboard, Create Trip).
+  - `root/`: Public and tourist-facing routes (Home, Travel Details, My Trips).
+  - `api/`: Server-side API endpoints (e.g., trip generation).
+- `app/components/`: Reusable UI components.
+- `app/lib/`: Utility functions and database clients.
 
-Create a production build:
+## 🤝 Contributing
 
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ by the Tourvisto Team.

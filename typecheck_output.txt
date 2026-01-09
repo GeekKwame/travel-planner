@@ -1,0 +1,49 @@
+
+> typecheck
+> react-router typegen && tsc
+
+app/routes/admin/trip-details.tsx(34,9): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+app/routes/admin/trip-details.tsx(66,36): error TS18048: 'trip.itinerary' is possibly 'undefined'.
+app/routes/admin/trip-details.tsx(127,25): error TS2339: Property 'tags' does not exist on type '{ imageUrls: any; id?: string | undefined; name?: string | undefined; description?: string | undefined; estimatedPrice?: string | undefined; duration?: number | undefined; budget?: string | undefined; ... 16 more ...; [__default]: true; }'.
+cloned-files/travel-agency-dashboard/app/appwrite/dashboard.ts(1,31): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/constants/index.ts(2,26): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/entry.client.tsx(1,25): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/entry.server.tsx(2,25): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/entry.server.tsx(10,37): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/lib/stripe.ts(1,20): error TS2307: Cannot find module 'stripe' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/root.tsx(9,25): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/root.tsx(11,28): error TS2307: Cannot find module './+types/root' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/all-users.tsx(3,30): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/all-users.tsx(5,26): error TS2307: Cannot find module './+types/all-users' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/create-trip.tsx(3,28): error TS2307: Cannot find module './+types/create-trip' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/create-trip.tsx(5,29): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/create-trip.tsx(6,62): error TS2307: Cannot find module '@syncfusion/ej2-react-maps' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/dashboard.tsx(3,28): error TS2307: Cannot find module './+types/dashboard' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/dashboard.tsx(6,29): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/dashboard.tsx(63,33): error TS7006: Parameter 'trip' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/admin/dashboard.tsx(117,36): error TS7006: Parameter 'trip' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/admin/trip-detail.tsx(3,28): error TS2307: Cannot find module './+types/trip-detail' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/trip-detail.tsx(4,47): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/trip-detail.tsx(65,31): error TS7006: Parameter 'item' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/admin/trip-detail.tsx(158,54): error TS7006: Parameter 'item' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/admin/trips.tsx(4,29): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/admin/trips.tsx(5,26): error TS2307: Cannot find module './+types/trips' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/api/create-trip.ts(2,34): error TS2307: Cannot find module '@google/generative-ai' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/api/create-trip.ts(3,50): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/api/create-trip.ts(6,29): error TS2307: Cannot find module '~/lib/stripe' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/payment-success.tsx(3,28): error TS2307: Cannot find module './+types/payment-success' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/payment-success.tsx(5,22): error TS2307: Cannot find module 'canvas-confetti' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-detail.tsx(3,28): error TS2307: Cannot find module './+types/travel-detail' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-detail.tsx(4,47): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-detail.tsx(71,39): error TS7006: Parameter 'item' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-detail.tsx(164,54): error TS7006: Parameter 'item' implicitly has an 'any' type.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-page.tsx(3,33): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/app/routes/root/travel-page.tsx(6,26): error TS2307: Cannot find module '../../../.react-router/types/app/routes/admin/+types/trips' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/components/Header.tsx(2,18): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/components/NavItems.tsx(3,18): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/components/RootNavbar.tsx(4,18): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/components/StatsCard.tsx(1,44): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/components/TripCard.tsx(3,32): error TS2307: Cannot find module '~/lib/utils' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/react-router.config.ts(2,32): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.
+cloned-files/travel-agency-dashboard/vite.config.ts(5,69): error TS2307: Cannot find module '@sentry/react-router' or its corresponding type declarations.

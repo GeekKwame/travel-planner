@@ -1,0 +1,11 @@
+
+> typecheck
+> react-router typegen && tsc
+
+app/appwrite/dashboard.ts(15,56): error TS2304: Cannot find name 'DashboardStats'.
+app/routes/admin/trip-details.tsx(34,9): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+app/routes/admin/trip-details.tsx(66,36): error TS18048: 'trip.itinerary' is possibly 'undefined'.
+app/routes/admin/trip-details.tsx(127,25): error TS2339: Property 'tags' does not exist on type '{ imageUrls: any; id?: string | undefined; name?: string | undefined; description?: string | undefined; estimatedPrice?: string | undefined; duration?: number | undefined; budget?: string | undefined; ... 16 more ...; [__default]: true; }'.
+app/routes/root/travel-page.tsx(9,111): error TS2304: Cannot find name 'DestinationProps'.
+app/routes/root/travel-page.tsx(62,60): error TS2304: Cannot find name 'Trip'.

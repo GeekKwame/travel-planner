@@ -71,6 +71,7 @@ export interface Trip {
   bestTimeToVisit: string[];
   weatherInfo: string[];
   location: Location;
+  tags: string[];
   payment_link: string;
 }
 

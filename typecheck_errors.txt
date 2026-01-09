@@ -1,0 +1,12 @@
+
+> typecheck
+> react-router typegen && tsc
+
+app/lib/stripe.ts(4,5): error TS2322: Type '"2024-12-18.acacia"' is not assignable to type '"2025-12-15.clover"'.
+app/routes/admin/create-trip.tsx(181,51): error TS2304: Cannot find name 'formatKey'.
+app/routes/admin/create-trip.tsx(190,56): error TS2304: Cannot find name 'formatKey'.
+app/routes/admin/create-trip.tsx(242,116): error TS2304: Cannot find name 'cn'.
+app/routes/api/create-trip.ts(93,23): error TS18046: 'trip' is of type 'unknown'.
+app/routes/api/create-trip.ts(94,33): error TS18046: 'trip' is of type 'unknown'.
+app/routes/api/create-trip.ts(97,30): error TS18046: 'trip' is of type 'unknown'.
+components/InfoPill.tsx(1,36): error TS2304: Cannot find name 'InfoPillProps'.

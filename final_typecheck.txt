@@ -1,0 +1,7 @@
+
+> typecheck
+> react-router typegen && tsc
+
+app/routes/admin/create-trip.tsx(181,51): error TS2304: Cannot find name 'formatKey'.
+app/routes/admin/create-trip.tsx(190,56): error TS2304: Cannot find name 'formatKey'.
+app/routes/admin/create-trip.tsx(242,116): error TS2304: Cannot find name 'cn'.
