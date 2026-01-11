@@ -22,7 +22,6 @@
     "@syncfusion/ej2-react-navigations": "^32.1.19",
     "@syncfusion/ej2-react-splitbuttons": "^32.1.19",
     "@types/canvas-confetti": "^1.9.0",
-    "@vercel/react-router": "^1.2.4",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.19",
