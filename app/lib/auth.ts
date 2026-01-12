@@ -26,7 +26,8 @@ export const storeUserData = async () => {
         if (!user) throw new Error("No authenticated user found")
 
         // Check if user is the designated admin
-        const isAdminUser = user.email?.toLowerCase() === process.env.ADMIN_EMAIL?.toLowerCase()
+        const adminEmail = typeof process !== 'undefined' ? process.env.ADMIN_EMAIL : null;
+        const isAdminUser = user.email?.toLowerCase() === adminEmail?.toLowerCase()
 
         const profileData = {
             id: user.id,
